@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission Form - EDUCATION CAMPUS</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+color:#333;
+}
+
+/* HEADER */
+header{
+background:black;
+color:white;
+padding:12px 20px;
+display:flex;
+align-items:center;
+justify-content:flex-start;
+font-size:22px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+box-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* LOGO LEFT ROUND */
+header img{
+height:50px;
+width:50px;
+border-radius:50%;
+margin-right:12px;
+object-fit:cover;
+border:2px solid white;
+}
+
+/* FORM BOX */
+.container{
+max-width:400px;
+margin:40px auto;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#00c853;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#009624;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<img src="logo.png" alt="Logo">
+EDUCATION CAMPUS - ADMISSION
+</header>
+
+<div class="container">
+
+<h2>Admission Form</h2>
+
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Student Name" required>
+
+<input type="text" id="father" placeholder="Father Name" required>
+
+<select id="class" required>
+<option value="">Select Class</option> 
+<Claoption>ss 6</option>
+<option>Class 7</option>
+<option>Class 8</option>
+<option>Class 9</option>
+<option>Class 10</option>
+</select>
+
+<input type="text" id="school" placeholder="School Name" required>
+
+<input type="text" id="mobile" placeholder="Mobile Number" required>
+
+<button type="submit">Submit & Send</button>
+
+</form>
+
+</div>
+
+<script>
+function sendToWhatsApp(){
+let name = document.getElementById("name").value;
+let father = document.getElementById("father").value;
+let studentClass = document.getElementById("class").value;
+let school = document.getElementById("school").value;
+let mobile = document.getElementById("mobile").value;
+
+let message = `🎓 Admission Form\n\n👤 Name: ${name}\n👨 Father: ${father}\n📚 Class: ${studentClass}\n🏫 School: ${school}\n📞 Mobile: ${mobile}`;
+
+let phone = "919155819181"; // 👉 Apna WhatsApp number daal
+
+let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
