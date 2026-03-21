@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDUCATION CAMPUS</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+color:white;
+text-align:center;
+overflow-x:hidden;
+
+/* RGB BACKGROUND */
+background:linear-gradient(270deg, red, blue, green, purple, orange);
+background-size:1000% 1000%;
+animation:rgbMove 20s ease infinite;
+}
+
+@keyframes rgbMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+nav{
+background:black;
+padding:10px;
+display:flex;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+width:50px;
+height:50px;
+border-radius:50%;
+margin-right:10px;
+}
+
+/* GRID MENU */
+.menu{
+display:grid;
+grid-template-columns:repeat(2,auto);
+gap:5px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:14px;
+padding:6px 10px;
+border-radius:5px;
+font-weight:bold;
+background:#333;
+}
+
+.menu a:hover{
+background:white;
+color:black;
+}
+
+/* HERO */
+.hero{
+padding:50px 20px;
+}
+
+/* CARD */
+.card{
+background:white;
+color:black;
+margin:15px;
+padding:15px;
+border-radius:10px;
+}
+
+/* PRINCIPAL */
+.principal-card{
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(10px);
+}
+
+.principal-box{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.principal-img{
+width:100px;
+height:100px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid white;
+}
+
+.principal-text{
+max-width:400px;
+}
+
+/* NOTICE */
+.notice-card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border:2px solid rgba(255,255,255,0.3);
+box-shadow:0 0 15px rgba(255,255,255,0.5);
+color:white;
+}
+
+.notice-card h2{
+font-weight:900;
+font-size:22px;
+text-shadow:0 0 8px #fff;
+text-transform:uppercase;
+}
+
+.notice-box{
+height:140px;
+overflow:hidden;
+position:relative;
+}
+
+.notice-content{
+position:absolute;
+width:100%;
+animation:scrollUp 10s linear infinite;
+}
+
+.notice-content p{
+background:rgba(0,0,0,0.6);
+margin:8px;
+padding:8px;
+border-radius:8px;
+font-weight:bold;
+}
+
+@keyframes scrollUp{
+0%{top:100%;}
+100%{top:-100%;}
+}
+
+/* SLIDER */
+.slider{
+width:90%;
+height:180px;
+margin:auto;
+overflow:hidden;
+border-radius:10px;
+}
+
+.slider img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+/* TOPPERS */
+.topper-container{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.topper{
+text-align:center;
+}
+
+.topper-img{
+width:60px;
+height:60px;
+border-radius:50%;
+border:2px solid white;
+}
+
+/* TEACHERS */
+.teacher-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.teacher{
+width:90px;
+text-align:center;
+}
+
+.teacher-img{
+width:60px;
+height:60px;
+border-radius:50%;
+border:2px solid white;
+}
+
+/* FOOTER */
+footer{
+background:black;
+padding:10px;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<img src="https://via.placeholder.com/100" class="logo">
+<h2 style="flex:1;">EDUCATION CAMPUS</h2>
+
+<div class="menu">
+<a href="#">HOME</a>
+<a href="#">ADMISSION</a>
+<a href="#teachers">PAGE</a>
+<a href="#">PAY FEE</a>
+</div>
+</nav>
+
+<div class="hero">
+<h1>Welcome to EDUCATION CAMPUS</h1>
+<p>Best Coaching for Class 6 to 10</p>
+</div>
+
+<!-- PRINCIPAL -->
+<div class="card principal-card">
+<div class="principal-box">
+
+<img src="https://via.placeholder.com/120" class="principal-img">
+
+<div class="principal-text">
+<h3>👨‍🏫 Principal's Message</h3>
+<p>
+Welcome to EDUCATION CAMPUS. Our mission is to provide quality education 
+and guide every student towards success and bright future.
+</p>
+<h4>- Principal Name</h4>
+</div>
+
+</div>
+</div>
+
+<!-- NOTICE -->
+<div class="card notice-card">
+<h2>📢 Notice Board</h2>
+<div class="notice-box">
+  <div class="notice-content">
+    <p>🔹 A - Weekly Test Every Sunday</p>
+    <p>🔹 B - New Batch Starting Soon</p>
+    <p>🔹 C - Holiday on 26 January</p>
+    <p>🔹 D - Fees Last Date 25 March</p>
+  </div>
+</div>
+</div>
+
+<!-- SLIDER -->
+<div>
+<h2>📸 Our Classes</h2>
+<div class="slider">
+<img id="slideImage" src="https://source.unsplash.com/800x400/?classroom">
+</div>
+</div>
+
+<!-- TOPPERS -->
+<div class="card">
+<h2>🏆 Our Toppers</h2>
+<div class="topper-container">
+
+<div class="topper"><img src="https://via.placeholder.com/100" class="topper-img"><p>Rahul 95%</p></div>
+<div class="topper"><img src="https://via.placeholder.com/100" class="topper-img"><p>Priya 93%</p></div>
+<div class="topper"><img src="https://via.placeholder.com/100" class="topper-img"><p>Aman 91%</p></div>
+
+</div>
+</div>
+
+<!-- TEACHERS -->
+<div class="card" id="teachers">
+<h2>👨‍🏫 Our Teachers</h2>
+<div class="teacher-container">
+
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Rahul</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Pooja</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Amit</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Sneha</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Vikas</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Ritu</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Arjun</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Neha</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Rohit</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Anjali</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Karan</p></div>
+<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Simran</p></div>
+
+</div>
+</div>
+
+<footer>
+<p>📞 Contact: 9876543210</p>
+<p>© 2026 EDUCATION CAMPUS</p>
+</footer>
+
+<script>
+const images = [
+"https://source.unsplash.com/800x400/?classroom",
+"https://source.unsplash.com/800x400/?students",
+"https://source.unsplash.com/800x400/?study"
+];
+
+let index = 0;
+
+setInterval(()=>{
+index = (index + 1) % images.length;
+document.getElementById("slideImage").src = images[index];
+},2000);
+</script>
+
+</body>
+</html>
