@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EDUCATION CAMPUS</title>
 
 <style>
-body{
+*{
 margin:0;
-font-family:Arial;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
 color:white;
 text-align:center;
 overflow-x:hidden;
-
-/* RGB BACKGROUND */
-background:linear-gradient(270deg, red, blue, green, purple, orange);
+background:linear-gradient(270deg,red,blue,green,purple,orange);
 background-size:1000% 1000%;
 animation:rgbMove 20s ease infinite;
 }
@@ -24,37 +28,35 @@ animation:rgbMove 20s ease infinite;
 100%{background-position:0% 50%;}
 }
 
-/* NAVBAR */
 nav{
-background:black;
+background:#000;
 padding:10px;
 display:flex;
 align-items:center;
+justify-content:space-between;
 flex-wrap:wrap;
 }
 
 .logo{
-width:50px;
-height:50px;
+width:60px;
+height:60px;
 border-radius:50%;
-margin-right:10px;
+object-fit:cover;
 }
 
-/* GRID MENU */
 .menu{
-display:grid;
-grid-template-columns:repeat(2,auto);
-gap:5px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
 }
 
 .menu a{
 color:white;
 text-decoration:none;
-font-size:14px;
-padding:6px 10px;
-border-radius:5px;
-font-weight:bold;
+padding:8px 12px;
 background:#333;
+border-radius:6px;
+font-weight:bold;
 }
 
 .menu a:hover{
@@ -62,64 +64,36 @@ background:white;
 color:black;
 }
 
-/* HERO */
 .hero{
-padding:50px 20px;
+padding:60px 20px;
 }
 
-/* CARD */
 .card{
-background:white;
-color:black;
-margin:15px;
-padding:15px;
-border-radius:10px;
-}
-
-/* PRINCIPAL */
-.principal-card{
-background:rgba(255,255,255,0.2);
+margin:20px;
+padding:20px;
+border-radius:15px;
+background:rgba(255,255,255,0.15);
 backdrop-filter:blur(10px);
 }
 
 .principal-box{
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 gap:20px;
 flex-wrap:wrap;
 }
 
 .principal-img{
-width:100px;
-height:100px;
+width:120px;
+height:120px;
 border-radius:50%;
 object-fit:cover;
 border:3px solid white;
 }
 
-.principal-text{
-max-width:400px;
-}
-
-/* NOTICE */
-.notice-card{
-background:rgba(255,255,255,0.15);
-backdrop-filter:blur(10px);
-border:2px solid rgba(255,255,255,0.3);
-box-shadow:0 0 15px rgba(255,255,255,0.5);
-color:white;
-}
-
-.notice-card h2{
-font-weight:900;
-font-size:22px;
-text-shadow:0 0 8px #fff;
-text-transform:uppercase;
-}
-
 .notice-box{
-height:140px;
+height:150px;
 overflow:hidden;
 position:relative;
 }
@@ -131,11 +105,10 @@ animation:scrollUp 10s linear infinite;
 }
 
 .notice-content p{
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.5);
 margin:8px;
-padding:8px;
+padding:10px;
 border-radius:8px;
-font-weight:bold;
 }
 
 @keyframes scrollUp{
@@ -143,64 +116,45 @@ font-weight:bold;
 100%{top:-100%;}
 }
 
-/* SLIDER */
 .slider{
 width:90%;
-height:180px;
+max-width:800px;
 margin:auto;
 overflow:hidden;
-border-radius:10px;
+border-radius:15px;
 }
 
 .slider img{
 width:100%;
-height:180px;
+height:250px;
 object-fit:cover;
 }
 
-/* TOPPERS */
-.topper-container{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.topper{
-text-align:center;
-}
-
-.topper-img{
-width:60px;
-height:60px;
-border-radius:50%;
-border:2px solid white;
-}
-
-/* TEACHERS */
+.topper-container,
 .teacher-container{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
-gap:15px;
+flex-wrap:wrap;
+gap:20px;
 }
 
+.topper,
 .teacher{
-width:90px;
 text-align:center;
 }
 
+.topper-img,
 .teacher-img{
-width:60px;
-height:60px;
+width:90px;
+height:90px;
 border-radius:50%;
-border:2px solid white;
+object-fit:cover;
+border:3px solid white;
 }
 
-/* FOOTER */
 footer{
 background:black;
-padding:10px;
+padding:15px;
 margin-top:20px;
 }
 </style>
@@ -209,112 +163,102 @@ margin-top:20px;
 <body>
 
 <nav>
-<img src="" class="logo">
-<h2 style="flex:1;">EDUCATION CAMPUS</h2>
+<img src="WhatsApp Image 2026-05-31 at 2.16.22 PM.jpeg" class="logo" alt="Logo">
+
+<h2>EDUCATION CAMPUS</h2>
 
 <div class="menu">
 <a href="index.html">HOME</a>
 <a href="admission.html">ADMISSION</a>
-<a href="teacher.html">TEACHER PAGE</a>
+<a href="teacher.html">TEACHERS</a>
 <a href="#">PAY FEE</a>
 </div>
 </nav>
 
 <div class="hero">
-<h1>Welcome to EDUCATION CAMPUS</h1>
-<p>Best Coaching for Class 1 to 10 </p>
+<h1>Welcome To EDUCATION CAMPUS</h1>
+<p>Best Coaching For Class 1 To 10</p>
 </div>
 
-<!-- PRINCIPAL -->
-<div class="card principal-card">
+<div class="card">
 <div class="principal-box">
 
 <img src="WhatsApp Image 2026-05-31 at 2.38.42 PM.jpeg" class="principal-img">
 
-<div class="principal-text">
-<h3>👨‍🏫 Principal's Message</h3>
+<div>
+<h2>👨‍🏫 Principal's Message</h2>
 <p>
-Welcome to EDUCATION CAMPUS. Our mission is to provide quality education 
-and guide every student towards success and bright future.
+Welcome to EDUCATION CAMPUS.
+Our mission is to provide quality education and guide every student toward success.
 </p>
-<h4>- Dr.Ravi prakash</h4>
+<h3>- Dr. Ravi Prakash</h3>
 </div>
 
 </div>
 </div>
 
-<!-- NOTICE -->
-<div class="card notice-card">
+<div class="card">
 <h2>📢 Notice Board</h2>
+
 <div class="notice-box">
-  <div class="notice-content">
-    <p>🔹 SUMMER VACATION IS START</p>
-    <p>🔹  OFFICE WILL OPEN </p>
-    <p>🔹  Holiday on 26 MAY</p>
-    <p>🔹 </p>
-  </div>
+<div class="notice-content">
+<p>🔹 Summer Vacation Started</p>
+<p>🔹 Office Open Daily 9 AM - 2 PM</p>
+<p>🔹 Admission Open For Session 2026</p>
+<p>🔹 Monthly Test On 15 June</p>
+</div>
 </div>
 </div>
 
-<!-- SLIDER -->
-<div>
 <h2>📸 Our Classes</h2>
-<div class="slider">
-<img id="slideImage" src="WhatsApp Image 2026-05-31 at 3.11.49 PM.jpeg">
-<div>
-</div>
 
-<!-- TOPPERS -->
+<div class="slider">
+<img id="WhatsApp Image 2026-05-31 at 3.11.49 PM.jpeg">
+<img id=""></div>
+
 <div class="card">
 <h2>🏆 Our Toppers</h2>
+
 <div class="topper-container">
 
-<div class="topper"><img src="WhatsApp Image 2026-03-21 at 10.26.07 AM.jpeg" class="topper-img"><p> Ayush kumar 95%</p></div>
-<div class="topper"><img src="https://via.placeholder.com/100" class="topper-img"><p> ....</p></div>
-<div class="topper"><img src="https://via.placeholder.com/100" class="topper-img"><p>...</p></div>
+<div class="topper">
+<img src="images/topper1.jpg" class="topper-img">
+<p>Ayush Kumar<br>95%</p>
+</div>
+
+<div class="topper">
+<img src="images/topper2.jpg" class="topper-img">
+<p>Student Name<br>92%</p>
+</div>
+
+<div class="topper">
+<img src="images/topper3.jpg" class="topper-img">
+<p>Student Name<br>90%</p>
+</div>
 
 </div>
 </div>
-
-<!-- TEACHERS -->
-<div class="card" id="teachers">
-<h2>👨‍🏫 Our Teachers</h2>
-<div class="teacher-container">
-
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Ashish kumar</p></div>
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>vivek pandey</p></div>
-<div class="teacher"><img src="WhatsApp Image 2026-05-31 at 2.44.58 PM.jpeg"class="teacher-img"><p>Varun kumar</p></div>
-<div class="teacher"><img src=".........." class="teacher-img"><p>Nikhil kumar</p></div>
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>Riya kumari</p></div>
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>......</p></div>
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>.....</p></div>
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>.....</p></div>
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>......</p></div>
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>.....</p></div>
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>......</p></div>
-<div class="teacher"><img src="https://via.placeholder.com/100" class="teacher-img"><p>....</p></div>
-
-</div>
-</div>
-
 <footer>
 <p>📞 Contact: 9876543210</p>
-<p>© 2026 EDUCATION CAMPUS</p>
+<p>📍 Dehri On Sone, Bihar</p>
+<p>© 2000 EDUCATION CAMPUS</p>
 </footer>
 
 <script>
+
 const images = [
-"https://source.unsplash.com/800x400/?classroom",
-"https://source.unsplash.com/800x400/?students",
-"https://source.unsplash.com/800x400/?study"
+"images/class1.jpg",
+"images/class2.jpg",
+"images/class3.jpg"
 ];
 
 let index = 0;
 
-setInterval(()=>{
+setInterval(() => {
 index = (index + 1) % images.length;
 document.getElementById("slideImage").src = images[index];
-},2000);
+},3000);
+
 </script>
 
 </body>
