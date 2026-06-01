@@ -213,8 +213,56 @@ Our mission is to provide quality education and guide every student toward succe
 <h2>📸 Our Classes</h2>
 
 <div class="slider">
-<img id="WhatsApp Image 2026-05-31 at 3.11.49 PM.jpeg">
+    <img id="slide" src="images/class1.jpg" alt="Our Classes">
 </div>
+
+<style>
+.slider{
+    width:95%;
+    max-width:1200px;
+    height:450px;
+    margin:20px auto;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.slider img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:opacity 1s ease-in-out;
+}
+</style>
+
+<script>
+const photos = [
+    "WhatsApp Image 2026-05-31 at 3.11.49 PM.jpeg",
+    "WhatsApp Image 2026-06-01 at 5.03.36 PM.jpeg",
+    "WhatsApp Image 2026-06-01 at 5.03.36 PM.jpeg",
+    "images/class4.jpg",
+    "images/class5.jpg",
+    "images/class6.jpg",
+    "images/class7.jpg",
+    "images/class8.jpg",
+    "images/class9.jpg",
+    "images/class10.jpg"
+];
+
+let current = 0;
+const slide = document.getElementById("slide");
+
+setInterval(() => {
+    slide.style.opacity = 0;
+
+    setTimeout(() => {
+        current = (current + 1) % photos.length;
+        slide.src = photos[current];
+        slide.style.opacity = 1;
+    }, 500);
+
+}, 3000);
+</script>
 
 <div class="card">
 <h2>🏆 Our Toppers</h2>
